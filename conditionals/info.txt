@@ -1,0 +1,133 @@
+JavaScript - Conditional Statements:
+
+        JavaScript conditional statements are used to make decisions in a program based on given conditions.
+        They control the flow of execution by running different code blocks depending on whether a condition is true or false.
+    
+    1.If-Statement:
+        Executes code only when a specified condition is true.
+        Useful for making simple decisions in a program.
+
+        example:
+        
+        let x = 20;
+
+        if (x % 2 === 0) {
+            console.log("Even");
+        }
+
+        if (x % 2 !== 0) {
+            console.log("Odd");
+        };
+
+    2.if-else Statement:
+        
+        Used when there are two possible outcomes.
+        The else block runs when the if condition is not satisfied.
+
+        example:
+
+        let age = 25;
+
+        if (age >= 18) {
+            console.log("Adult")
+        } else {
+            console.log("Not an Adult")
+        };
+    
+    3.else if Statement:
+        
+        Allows checking more than two conditions.
+        Evaluated from top to bottom until a true condition is found.
+
+        example:
+
+        const x = 0;
+
+        if (x > 0) {
+            console.log("Positive.");
+        } else if (x < 0) {
+            console.log("Negative.");
+        } else {
+            console.log("Zero.");
+        };
+
+    4.Switch Statement:
+            
+            Used when one variable needs to be compared against multiple fixed values.
+            Improves readability compared to long if...else if chains.
+
+            example:
+
+            const marks = 85;
+
+            let Branch;
+
+            switch (true) {
+                case marks >= 90:
+                    Branch = "Computer science engineering";
+                    break;
+                case marks >= 80:
+                    Branch = "Mechanical engineering";
+                    break;
+                case marks >= 70:
+                    Branch = "Chemical engineering";
+                    break;
+                case marks >= 60:
+                    Branch = "Electronics and communication";
+                    break;
+                case marks >= 50:
+                    Branch = "Civil engineering";
+                    break;
+                default:
+                    Branch = "Bio technology";
+                    break;
+            }
+
+            console.log(`Student Branch name is : ${Branch}`);
+
+    5.Ternary Operator:
+        
+        A condition to test.
+        An expression to evaluate if the condition is true.
+        An expression to evaluate if the condition is false.
+
+        Syntex:
+
+        condition ? expressionIfTrue : expressionIfFalse
+
+        example:
+
+        let age = 21;
+
+        const result =
+            (age >= 18) ? "You are eligible to vote."
+                : "You are not eligible to vote.";
+
+        console.log(result);
+
+    6.Nested if....else:
+
+       Useful for handling complex decision-making logic.
+       Deep nesting should be avoided to maintain code readability.
+
+       example:
+
+        let weather = "sunny";
+        let temp = 25;
+
+        if (weather === "sunny") {
+            if (temp > 30) {
+                console.log("It's a hot day!");
+            } else if (temp > 20) {
+                console.log("It's a warm day.");
+            } else {
+                console.log("It's a bit cool today.");
+            }
+        } else if (weather === "rainy") {
+            console.log("Don't forget your umbrella!");
+        } else {
+            console.log("Check the weather forecast!");
+        };
+
+
+
