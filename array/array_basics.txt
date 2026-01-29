@@ -1,0 +1,97 @@
+Array:
+
+  In JavaScript, an array is an ordered list of values. 
+  Each value, known as an element, is assigned a numeric position in the array called its index.
+  The indexing starts at 0, so the first element is at position 0, the second at position 1, and so on.
+
+Creating Array:
+
+    // Creating an Empty Array
+    let a = [];
+    console.log(a);
+
+    // Creating an Array and Initializing with Values
+    let b = [10, 20, 30];
+    console.log(b);
+
+    // Creating and Initializing an array with values
+    let a = new Array(10, 20, 30);
+
+    console.log(a);
+
+Accessing Array Element:
+
+        // Accessing First Array Elements
+        let fst = a[0];
+
+        console.log("First Item: ", fst);
+
+        // Accessing Last Array Elements
+        let lst = a[a.length - 1];
+
+        console.log("First Item: ", lst);
+
+Modifying Array Element:
+
+    // Add Element to the end of Array
+    a.push("Node.js");
+
+    // Add Element to the beginning
+    a.unshift("Web Development");
+
+
+    // Removes and returns the last element
+    let lst = a.pop();
+    console.log("After Removing the last: " + a);
+
+    // Removes and returns the first element
+    let fst = a.shift();
+    console.log("After Removing the First: " + a);
+
+    // Removes 2 elements starting from index 1
+    a.splice(1, 2);
+    console.log("After Removing 2 elements starting from index 1: " + a);
+
+    // Creating an Array and Initializing with Values
+    let a = ["HTML", "CSS", "JS"];
+
+    let len = a.length;
+
+    console.log("Array Length: " + len);
+
+    // Creating an Array and Initializing with Values
+    let a = ["HTML", "CSS", "JS"]
+
+    // Increase the array length to 7
+    a.length = 7;
+
+    console.log("After Increasing Length: ", a);
+
+    // Decrease the array length to 2
+    a.length = 2;
+    console.log("After Decreasing Length: ", a)
+
+
+    // Creating an Array and Initializing with Values
+    let a = ["HTML", "CSS", "JS"];
+
+    // Iterating through for loop
+    for (let i = 0; i < a.length; i++) {
+        console.log(a[i])
+    }
+
+    // Creating an Array and Initializing with Values
+    let a = ["HTML", "CSS", "JS", "React"];
+    let b = ["Node.js", "Expess.js"];
+
+    // Concatenate both arrays
+    let concateArray = a.concat(b);
+
+    console.log("Concatenated Array: ", concateArray);
+
+
+    // Creating an Array and Initializing with Values
+    let a = ["HTML", "CSS", "JS"];
+
+    // Convert array ot String
+    console.log(a.toString());
