@@ -1,0 +1,117 @@
+String:
+    A JavaScript String is a sequence of characters, typically used to represent text.
+
+Declare string:
+
+    // Using Single Quote
+    let s1 = 'abcd';
+
+    // Using Double Quote
+    let s2 = "abcd";
+
+    //Using new string
+    let s = new String('abcd');
+
+    the string created by the new keyword is an object and is not the same as normal strings.
+
+    //Create using template literals
+    let s1 = 'gfg';
+    let s2 = `You are learning from ${s1}`;
+
+    //declare empty string
+    let s1 = '';
+    let s2 = "";
+
+    //multiline string
+    let s = `
+    This is a
+    multiline
+    string`;
+
+
+Operations in String: 
+
+
+1.Finding the length of a String
+
+    let s = 'JavaScript';
+    let len = s.length;
+
+2.String Concatation: 
+
+    let s1 = 'Java';
+    let s2 = 'Script';
+    let res = s1 + s2;
+
+3.Escape Characters:
+
+    const s1 = "\'GfG\' is a learning portal";
+    const s2 = "\"GfG\" is a learning portal";
+    const s3 = "\\GfG\\ is a learning portal";
+
+4.Find SubString: 
+
+    let s1 = 'JavaScript Tutorial';
+    let s2 = s1.substring(0, 10);
+
+5.Covert to lowecase or UPPERCASE:
+
+    let s = 'JavaScript';
+    let uCase = s.toUpperCase();
+    let lCase = s.toLowerCase();
+
+6.String Search: 
+
+    let s1 = 'def abc abc';
+    let i = s1.indexOf('abc');
+
+7.String Replace:
+
+    let s1 = 'Learn HTML at GfG and HTML is useful';
+    let s2 = s1.replace(/HTML/g, 'JavaScript');
+
+8.Trimming Whitespace:
+
+    let s1 = '    Learn JavaScript       ';
+    let s2 = s1.trim();
+
+9.Access Characters:
+
+    let s1 = 'Learn JavaScript';
+    let s2 = s1[6];
+
+10.String Comparison:
+
+    let s1 = "Ajay"
+    let s2 = new String("Ajay");
+
+    console.log(s1 == s2);  // true (type coercion)
+    console.log(s1 === s2); // false (strict comparison)
+    console.log(s1.localeCompare(s2)); // 0 (means they are equal lexicographically)
+
+    The equality operator (==) may return true when comparing a string object with a primitive string due to type coercion. 
+    However, === (strict equality) returns false because objects and primitives are different types. 
+    The localeCompare() method compares strings lexicographically.
+
+11.String Reverse:
+
+    *
+    let str = "hello";
+    let reversed = str.split("").reverse().join("");
+    console.log(reversed); // olleh
+
+    *
+    let str = "hello";
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+    }
+
+    console.log(reversed);
+
+    
+
+
+
+
