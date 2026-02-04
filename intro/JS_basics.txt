@@ -16,3 +16,144 @@ Variable:
 
     // Preferred for const (cannot be changed)
     const c = 30;  
+
+✅ Math.abs(x)
+
+Meaning: distance from 0
+Rule: removes the sign
+
+Math.abs(-5) → 5
+Math.abs(5)  → 5
+
+✅ Math.round(x)
+
+Meaning: nearest integer
+Rule:
+
+decimal ≥ 0.5 → up
+
+decimal < 0.5 → down
+
+Math.round(4.4) → 4
+Math.round(4.5) → 5
+
+✅ Math.ceil(x)
+
+Meaning: go UP on the number line
+(= toward positive infinity)
+
+Math.ceil(4.1)  → 5
+Math.ceil(-4.2) → -4
+
+
+ not “remove decimal”
+
+✅ Math.floor(x)
+
+Meaning: go DOWN on the number line
+(= toward negative infinity)
+
+Math.floor(4.9)  → 4
+Math.floor(-4.2) → -5
+
+
+ not “just smaller number”
+
+ Core idea (very important)
+floor → left
+ceil  → right
+
+
+on the number line.
+
+✅ Math.random()
+
+Meaning: random number between
+
+0 (inclusive)  and  1 (exclusive)
+
+Math.random() → 0.2345...
+
+✅ Random integer from 0 to 9
+Math.floor(Math.random() * 10)
+
+✅ Random integer between min and max
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+One-line summary
+Method	Real meaning
+abs	distance from 0
+round	nearest integer
+ceil	go right (up)
+floor	go left (down)
+
+✅ Create current date & time
+const now = new Date();
+
+
+→ gives a Date object (not a string)
+
+✅ Get parts of the date
+const d = new Date();
+
+d.getFullYear();   // year
+d.getMonth();      // month (0–11) 
+d.getDate();       // day of month
+d.getDay();        // day of week (0–6)
+d.getHours();
+d.getMinutes();
+d.getSeconds();
+
+ Biggest trap
+getMonth()
+
+
+returns 0–11
+
+So you must write:
+
+d.getMonth() + 1
+
+
+for human-readable month.
+
+✅ Create a specific date
+const d = new Date(2025, 7, 15);
+
+
+👉 7 = August
+(month is zero-based)
+
+✅ Create from string (safer)
+const d = new Date("2025-08-15");
+
+✅ Timestamp (very important for backend)
+Date.now()
+
+
+→ milliseconds since 1 Jan 1970
+
+Use this for storing time in DB.
+
+✅ Difference between two times
+const start = Date.now();
+// ...
+const end = Date.now();
+
+end - start; // milliseconds
+
+✅ Display nicely
+d.toLocaleString();
+d.toLocaleDateString();
+d.toLocaleTimeString();
+
+One-page summary
+Thing	Meaning
+new Date()	current date & time object
+getFullYear()	year
+getMonth()	month (0–11 ⚠️)
+getDate()	day of month
+getDay()	day of week
+Date.now()	timestamp in ms
